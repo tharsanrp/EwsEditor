@@ -23,7 +23,6 @@ using Microsoft.IdentityModel.Clients.ActiveDirectory;
 
 using System.Configuration;
 using System.Globalization;
-using System.Web.Script.Serialization;
 using Microsoft.Exchange.WebServices.Autodiscover;
 using System.Diagnostics;
 

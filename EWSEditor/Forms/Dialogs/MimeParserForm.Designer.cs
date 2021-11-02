@@ -57,7 +57,7 @@
             this.txtFileName = new System.Windows.Forms.TextBox();
             this.Label3 = new System.Windows.Forms.Label();
             this.Label1 = new System.Windows.Forms.Label();
-            this.StatusBar1 = new System.Windows.Forms.StatusBar();
+            this.StatusStrip1 = new System.Windows.Forms.StatusStrip();
             this.TreeView1 = new System.Windows.Forms.TreeView();
             this.cmsBPTree = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.saveBodypartToFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -77,11 +77,11 @@
             this.cmdBrowse = new System.Windows.Forms.Button();
             this.btnLoadTextEntry = new System.Windows.Forms.Button();
             this.lblFileName = new System.Windows.Forms.Label();
-            this.CmBpTree = new System.Windows.Forms.ContextMenu();
-            this.mnuSaveBodyPartToFile = new System.Windows.Forms.MenuItem();
-            this.mnuSaveEncodedBodyPartToFile = new System.Windows.Forms.MenuItem();
-            this.mnuSaveDecodedBodyPartToFile = new System.Windows.Forms.MenuItem();
-            this.mnuSaveBodyPartStreamToFile = new System.Windows.Forms.MenuItem();
+            this.CmBpTree = new System.Windows.Forms.ContextMenuStrip();
+            this.mnuSaveBodyPartToFile = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuSaveEncodedBodyPartToFile = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuSaveDecodedBodyPartToFile = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuSaveBodyPartStreamToFile = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -353,14 +353,14 @@
             this.Label1.TabIndex = 49;
             this.Label1.Text = "Bodypart Fields";
             // 
-            // StatusBar1
+            // StatusStrip1
             // 
-            this.StatusBar1.Location = new System.Drawing.Point(0, 532);
-            this.StatusBar1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.StatusBar1.Name = "StatusBar1";
-            this.StatusBar1.Size = new System.Drawing.Size(826, 21);
-            this.StatusBar1.TabIndex = 59;
-            this.StatusBar1.Text = "Not Loaded";
+            this.StatusStrip1.Location = new System.Drawing.Point(0, 532);
+            this.StatusStrip1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.StatusStrip1.Name = "StatusStrip1";
+            this.StatusStrip1.Size = new System.Drawing.Size(826, 21);
+            this.StatusStrip1.TabIndex = 59;
+            this.StatusStrip1.Text = "Not Loaded";
             // 
             // TreeView1
             // 
@@ -551,34 +551,30 @@
             // 
             // CmBpTree
             // 
-            this.CmBpTree.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this.CmBpTree.Items.AddRange(new System.Windows.Forms.ToolStripMenuItem[] {
             this.mnuSaveBodyPartToFile,
             this.mnuSaveEncodedBodyPartToFile,
             this.mnuSaveDecodedBodyPartToFile,
             this.mnuSaveBodyPartStreamToFile});
-            this.CmBpTree.Popup += new System.EventHandler(this.CmBpTree_Popup);
+            this.CmBpTree.Opened += new System.EventHandler(this.CmBpTree_Popup);
             // 
             // mnuSaveBodyPartToFile
             // 
-            this.mnuSaveBodyPartToFile.Index = 0;
             this.mnuSaveBodyPartToFile.Text = "Save Bodypart To File";
             this.mnuSaveBodyPartToFile.Click += new System.EventHandler(this.mnuSaveBodyPartToFile_Click);
             // 
             // mnuSaveEncodedBodyPartToFile
             // 
-            this.mnuSaveEncodedBodyPartToFile.Index = 1;
             this.mnuSaveEncodedBodyPartToFile.Text = "Save Encoded Bodypart Stream To File";
             this.mnuSaveEncodedBodyPartToFile.Click += new System.EventHandler(this.mnuSaveEncodedBodyPartToFile_Click);
             // 
             // mnuSaveDecodedBodyPartToFile
             // 
-            this.mnuSaveDecodedBodyPartToFile.Index = 2;
             this.mnuSaveDecodedBodyPartToFile.Text = "Save Decoded Bodypart Stream To File";
             this.mnuSaveDecodedBodyPartToFile.Click += new System.EventHandler(this.mnuSaveDecodedBodyPartToFile_Click);
             // 
             // mnuSaveBodyPartStreamToFile
             // 
-            this.mnuSaveBodyPartStreamToFile.Index = 3;
             this.mnuSaveBodyPartStreamToFile.Text = "Save Bodypart Stream To File";
             this.mnuSaveBodyPartStreamToFile.Click += new System.EventHandler(this.mnuSaveBodyPartStreamToFile_Click);
             // 
@@ -681,7 +677,7 @@
             this.Controls.Add(this.lblFileName);
             this.Controls.Add(this.btnLoadTextEntry);
             this.Controls.Add(this.txtFileName);
-            this.Controls.Add(this.StatusBar1);
+            this.Controls.Add(this.StatusStrip1);
             this.Controls.Add(this.TreeView1);
             this.Controls.Add(this.cmdLoad);
             this.Controls.Add(this.Label5);
@@ -715,7 +711,7 @@
         internal System.Windows.Forms.TextBox txtFileName;
         internal System.Windows.Forms.Label Label3;
         internal System.Windows.Forms.Label Label1;
-        internal System.Windows.Forms.StatusBar StatusBar1;
+        internal System.Windows.Forms.StatusStrip StatusStrip1;
         internal System.Windows.Forms.TreeView TreeView1;
         internal System.Windows.Forms.ListView ListView1;
         internal System.Windows.Forms.ColumnHeader colName;
@@ -730,10 +726,10 @@
         internal System.Windows.Forms.Button cmdBrowse;
         internal System.Windows.Forms.Button btnLoadTextEntry;
         internal System.Windows.Forms.Label lblFileName;
-        internal System.Windows.Forms.MenuItem mnuSaveBodyPartToFile;
-        internal System.Windows.Forms.MenuItem mnuSaveEncodedBodyPartToFile;
-        internal System.Windows.Forms.MenuItem mnuSaveDecodedBodyPartToFile;
-        internal System.Windows.Forms.MenuItem mnuSaveBodyPartStreamToFile;
+        internal System.Windows.Forms.ToolStripMenuItem mnuSaveBodyPartToFile;
+        internal System.Windows.Forms.ToolStripMenuItem mnuSaveEncodedBodyPartToFile;
+        internal System.Windows.Forms.ToolStripMenuItem mnuSaveDecodedBodyPartToFile;
+        internal System.Windows.Forms.ToolStripMenuItem mnuSaveBodyPartStreamToFile;
         internal System.Windows.Forms.ToolStripSeparator ToolStripSeparator1;
         internal System.Windows.Forms.ToolStripMenuItem cmsMime_Copy;
         internal System.Windows.Forms.ToolStripSeparator ToolStripSeparator2;
@@ -758,7 +754,7 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
-        public System.Windows.Forms.ContextMenu CmBpTree;
+        public System.Windows.Forms.ContextMenuStrip CmBpTree;
         private System.Windows.Forms.ContextMenuStrip cmsBPTree;
         private System.Windows.Forms.ToolStripMenuItem saveBodypartToFileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveEncodedBodypartStreamToFileToolStripMenuItem;

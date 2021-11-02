@@ -61,7 +61,7 @@ namespace EWSEditor.Common
             string serverName = sServername;
            
             AuthenticationContext authenticationContext = new AuthenticationContext(authority, false);
-            PlatformParameters oPlatformParameters = new PlatformParameters(oPromptBehavior);
+            PlatformParameters oPlatformParameters = new PlatformParameters(oPromptBehavior, null);
             AuthenticationResult authenticationResult = authenticationContext.AcquireTokenAsync(serverName, clientID, clientAppUri, oPlatformParameters).Result;
 
             sBearerToken = authenticationResult.AccessToken;

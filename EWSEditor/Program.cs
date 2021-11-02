@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Windows.Forms;
 using EWSEditor.Forms;
 using EWSEditor.Logging;
@@ -61,6 +61,7 @@ namespace EWSEditor
             try
             {
                 Application.EnableVisualStyles();
+                Application.SetHighDpiMode(HighDpiMode.SystemAware);
                 Application.SetCompatibleTextRenderingDefault(false);
                 Application.ThreadException += new System.Threading.ThreadExceptionEventHandler(Application_ThreadException);
 

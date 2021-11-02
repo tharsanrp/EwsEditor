@@ -1461,7 +1461,7 @@ namespace EWSEditor.RemotePowerShell
             try
             {
                 AuthenticationContext authenticationContext = new Microsoft.IdentityModel.Clients.ActiveDirectory.AuthenticationContext("https://login.microsoftonline.com/common", false);
-                AuthenticationResult authenticationResult = await authenticationContext.AcquireTokenAsync("https://outlook.office365.com", "a0c73c16-a7e3-4564-9a95-2bdf47383716", new Uri("urn:ietf:wg:oauth:2.0:oob"), new PlatformParameters(PromptBehavior.Always));
+                AuthenticationResult authenticationResult = await authenticationContext.AcquireTokenAsync("https://outlook.office365.com", "a0c73c16-a7e3-4564-9a95-2bdf47383716", new Uri("urn:ietf:wg:oauth:2.0:oob"), new PlatformParameters(PromptBehavior.Always, null));
                 return authenticationResult.CreateAuthorizationHeader();
             }
             catch (Exception ex)

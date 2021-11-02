@@ -52,9 +52,9 @@ namespace EWSEditor
 
             bool bRet = LoadMessage("string", sMIME);
             if (bRet == true)
-                StatusBar1.Text = "Loaded";
+                StatusStrip1.Text = "Loaded";
             else
-                StatusBar1.Text = "Not Loaded";
+                StatusStrip1.Text = "Not Loaded";
 
             DisableLoadSelection();
         }
@@ -65,9 +65,9 @@ namespace EWSEditor
  
             bool bRet = LoadMessage("string", sMIME);
             if (bRet == true)
-                StatusBar1.Text = "Loaded";
+                StatusStrip1.Text = "Loaded";
             else
-                StatusBar1.Text = "Not Loaded";
+                StatusStrip1.Text = "Not Loaded";
 
             DisableLoadSelection();
         }
@@ -111,7 +111,7 @@ namespace EWSEditor
             bRet = LoadMessage("string", sMime);
             if (bRet == true)
             {
-                StatusBar1.Text = "Loaded";
+                StatusStrip1.Text = "Loaded";
             }
             return bRet;
         }
@@ -127,7 +127,7 @@ namespace EWSEditor
             bRet = LoadMessage("string", sMime);
             if (bRet == true)
             {
-                StatusBar1.Text = "Loaded";
+                StatusStrip1.Text = "Loaded";
             }
             return bRet;
         }
@@ -142,7 +142,7 @@ namespace EWSEditor
             bRet = LoadMessage("file", sFile);
             if (bRet == true)
             {
-                StatusBar1.Text = "Loaded";
+                StatusStrip1.Text = "Loaded";
             }
             return bRet;
         }
@@ -621,11 +621,11 @@ namespace EWSEditor
             }
             else
             {
-                StatusBar1.Text = "Not Loaded";
+                StatusStrip1.Text = "Not Loaded";
                 bRet = LoadMessage("file", txtFileName.Text.Trim());
                 if (bRet == true)
                 {
-                    StatusBar1.Text = "Loaded";
+                    StatusStrip1.Text = "Loaded";
                 }
             }
         }
@@ -719,11 +719,11 @@ namespace EWSEditor
             }
             else
             {
-                StatusBar1.Text = "Not Loaded";
+                StatusStrip1.Text = "Not Loaded";
                 bRet = LoadMessage("file", txtFileName.Text.Trim());
                 if (bRet == true)
                 {
-                    StatusBar1.Text = "Loaded";
+                    StatusStrip1.Text = "Loaded";
                 }
             }
 
@@ -899,7 +899,7 @@ namespace EWSEditor
                     }
                     else
                     {
-                        StatusBar1.Panels[0].Text = " ";
+                        StatusStrip1.Items[0].Text = " ";
                     }
                     Cursor = Cursors.Default;
                 }
@@ -919,12 +919,12 @@ namespace EWSEditor
             if (oForm.ChoseOK == true)
             {
                 bool bRet = false;
-                StatusBar1.Text = "Not Loaded";
+                StatusStrip1.Text = "Not Loaded";
                 bRet = LoadMessage("string", oForm.UserTextEntry);
                 if (bRet == true)
-                    StatusBar1.Text = "Loaded";
+                    StatusStrip1.Text = "Loaded";
                 else
-                    StatusBar1.Text = "Not Loaded";
+                    StatusStrip1.Text = "Not Loaded";
             }
 
         }
